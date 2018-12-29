@@ -1,0 +1,36 @@
+% 图形和表格设置
+% 
+% 张量宏包
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{tensor}
+
+% 控制表达式箭头的宏包
+\usepackage{extarrows}
+
+% 表格宏包
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{mathtools}
+
+% 控制表格线粗细
+\usepackage{makecell}
+\usepackage{diagbox}
+
+\usepackage{graphicx}
+\DeclareGraphicsExtensions{.png, .jpg, .pdf}
+\graphicspath{{res/}}
+
+\makeatletter
+\def\fnum@figure#1{\figurename\nobreakspace\thefigure\hspace{1em}}
+%去掉“图：3-1”图后面的冒号并加空白1em
+\def\fnum@table#1{\tablename\nobreakspace\thetable\hspace{1em}}
+%去掉“表：3-1”表后面的冒号并加空白1em
+\makeatother
+
+% \renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}}
+% \renewcommand{\thetable}{\arabic{chapter}.\arabic{table}}
+% \renewcommand{\theequation}{\arabic{chapter}.\arabic{equation}}
+% \renewcommand{\figurename}{图}
+%修改表格、公式、图形的编号形式，如“图3.5”“表6.1”样式
+                                                                   

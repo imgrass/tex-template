@@ -1,0 +1,7 @@
+% 设置参考文献
+\clearpage %此处加入此命令是清除剩余的浮动元素
+\bibliographystyle{unsrt}
+%在目录中加入参考文献链接参考文献
+\addcontentsline{toc}{chapter}{参考文献}
+\newcommand{\upcite}[1]{\textsuperscript{\textsuperscript{\cite{#1}}}}
+%\renewcommand\cite\upcite

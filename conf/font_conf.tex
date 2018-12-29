@@ -1,0 +1,41 @@
+%字体配置
+
+%%--------------------------------------
+%= font config
+%
+%---------- math font
+%% Usage:
+%% select one of them
+%\usepackage{eulervm}
+\usepackage{txfonts}
+%
+%---------- txt font
+%% Usage:
+%% you can find all the useful fonts by:
+%%  $fc-list
+\usepackage{fontspec}
+%-> for English
+\setmainfont{Times New Roman} %->\rmfamily
+%\setsansfont{} %->\sffamily
+%\setmonofont{} %->\ttfamily
+
+% custom font
+%\newfontfamily\xxx{}
+
+%-> for Chinese
+% for Chinese, some options can be useful
+% [BoldFont=xxx, ItalicFont=xxx, BoldItalicFont=xxx]
+\setCJKmainfont[
+    BoldFont=SimHei,
+    ItalicFont=KaiTi,
+    BoldItalicFont=LiSu
+]{Adobe Song Std}
+%\setCJKsansfont{}
+%\setCJKmonofont{}
+
+% custom font
+%\setCJKfamilyfont{xxx}{}
+\setCJKfamilyfont{FtLoli}{Heiti SC}
+\def\ftLoli#1{{\CJKfamily{FtLoli}#1}}
+%%--------------------------------------
+

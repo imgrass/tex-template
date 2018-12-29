@@ -1,0 +1,42 @@
+% 设置页面大小
+\usepackage{geometry}
+\geometry{a4paper, left=4.2cm, right=2.7cm, top=3.4cm, bottom=4.0cm}
+
+%##################################################################
+% 设置页眉与页脚
+\usepackage{fancyhdr}                                
+\usepackage{lastpage}                                           
+\usepackage{layout}                                             
+\setlength{\headheight}{36pt}
+
+% 在页眉添加logo
+\newbox\tjmark
+\setbox\tjmark=\hbox{\includegraphics[scale=0.9]{res/tjlogo.png}}
+
+%\pagestyle{empty}                   %不设置页眉页脚            
+\pagestyle{fancy}                    % 设置页眉                 
+%\lhead{page \thepage\ of \pageref{LastPage}}                    
+\lhead{\strut{\copy\tjmark}}
+\rhead{毕业设计(论文)}                                                
+\chead{}
+%\rhead{毕业设计论文}                                                
+\cfoot{\thepage}                                                
+%\rfoot{页脚左}%                                                       
+%\lfoot{页脚右}                                                        
+\renewcommand{\headrulewidth}{0.8pt}  %页眉线宽，设为0可以去页眉线
+%\setlength{\skip\footins}{0.8cm}    %脚注与正文的距离           
+%\setlength{\headsep}{18pt}  %页眉和下面的文本相距18pt
+\renewcommand{\small}{}      %设置脚注字体大小           
+\renewcommand{\footrulewidth}{0pt}  %脚注线的宽度               
+% 使每章第一页等位置也可以使用特殊的页面风格
+\fancypagestyle{plain}{%
+    \fancyhf{}
+    \lhead{\strut{\copy\tjmark}}
+    \rhead{毕业设计(论文)}                                                
+    \chead{}
+    \cfoot{\thepage}                                                
+    \renewcommand{\headrulewidth}{0.5pt}  %页眉线宽，设为0可以去页眉线
+    \setlength{\headsep}{18pt}  %页眉和下面的文本相距18pt
+    \renewcommand{\footnotesize}{}      %设置脚注字体大小           
+    \renewcommand{\footrulewidth}{0pt}  %脚注线的宽度               
+}
