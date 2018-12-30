@@ -1,8 +1,15 @@
+%################################################
 % 设置页面大小
 \usepackage{geometry}
-\geometry{a4paper, left=4.2cm, right=2.7cm, top=3.4cm, bottom=4.0cm}
+\geometry{
+    a4paper, 
+    left=2.7cm,
+    right=2.5cm, 
+    top=2.4cm, 
+    bottom=3.0cm
+}
 
-%##################################################################
+%################################################
 % 设置页眉与页脚
 \usepackage{fancyhdr}                                
 \usepackage{lastpage}                                           
@@ -11,7 +18,7 @@
 
 % 在页眉添加logo
 \newbox\tjmark
-\setbox\tjmark=\hbox{\includegraphics[scale=0.9]{res/tjlogo.png}}
+\setbox\tjmark=\hbox{\includegraphics[scale=0.9]{res/pic/tjlogo.png}}
 
 %\pagestyle{empty}                   %不设置页眉页脚            
 \pagestyle{fancy}                    % 设置页眉                 
@@ -40,3 +47,25 @@
     \renewcommand{\footnotesize}{}      %设置脚注字体大小           
     \renewcommand{\footrulewidth}{0pt}  %脚注线的宽度               
 }
+
+%################################################
+% 设置章节格式
+% \CTEXsetup[
+%     format={\zihao{4}\heiti\centering},
+%     name={,}, 
+%     number={\arabic{chapter}},
+%     beforeskip={0pt}, 
+%     afterskip={18pt}
+% ] {chapter}
+
+\CTEXsetup[
+    format={\zihao{-3}\ftLoli\centering}
+]{section}
+
+\CTEXsetup[
+    format={\zihao{4}\heiti\centering}, 
+    indent={2em}
+]{subsection}
+
+%设置附录
+\CTEXsetup[name={附录}]{appendix}

@@ -1,0 +1,41 @@
+%主要用于设置一些常用的环境
+%%------------------------------------
+% 抄录环境
+%------------------------
+% 1.
+% listings 宏包提供了\verb命令的对应命令<\lstinline>,
+% 其可以在行文中直接使用带语法高亮的代码
+%---> \lstinline! xxxxxx !
+%------------------------
+% 2.
+% <`>是listings包中的转义符，可使用它在抄录环境中使用命令
+
+\setCJKfamilyfont{FtDej}{DejaVu Sans}
+\def\fonta{\CJKfamily{FtDej}}
+\usepackage{listings}
+%\lstset{
+%%---> 设置字体
+%    basicstyle=\fonta,
+%%   keywordstyle=\font2,
+%%   commentstyle=\font3,
+%%   stringstyle=\font4,
+%
+%%---> 设置字符是否等宽显示
+%%-> 默认显示为等宽:
+%    flexiblecolumns,
+%
+%%---> 是否显示行号
+%%-> 可分别在左右增加行号<left/right>
+%%-> 使用<numberstyle>设置行号格式
+%    numbers=left,
+%    numberstyle=\small
+%}
+\lstset{
+    basicstyle=\fonta,
+    keywordstyle=\bfseries,
+    commentstyle=\rmfamily\itshape,
+    stringstyle=\ttfamily,
+    flexiblecolumns,
+    numbers=left,
+    numberstyle=\small
+}

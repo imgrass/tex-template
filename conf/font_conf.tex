@@ -29,13 +29,21 @@
     BoldFont=SimHei,
     ItalicFont=KaiTi,
     BoldItalicFont=LiSu
-]{Adobe Song Std}
+]{SimSun}
 %\setCJKsansfont{}
 %\setCJKmonofont{}
 
 % custom font
 %\setCJKfamilyfont{xxx}{}
 \setCJKfamilyfont{FtLoli}{Heiti SC}
-\def\ftLoli#1{{\CJKfamily{FtLoli}#1}}
+\def\ftLoli{\CJKfamily{FtLoli}}
 %%--------------------------------------
 
+
+%%--------------------------------------
+% 字号与行距
+% \zihao 可影响环境和分组内的所有字体大小
+% \zihao{-3} <-小三号
+
+\usepackage{setspace}
+\setstretch{1.5} %<- 设置1.5倍行距
